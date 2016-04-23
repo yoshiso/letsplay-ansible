@@ -1,0 +1,4 @@
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+export AWS_VPC_ID=vpc-2ec5ac46
+export AWS_SUBNET_ID=subnet-2fc5ac47
