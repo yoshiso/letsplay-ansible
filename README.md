@@ -13,6 +13,12 @@ direnv allow .
 
 ## #1, Ping to target servers.
 
+First, checkout tags/#1 branch. 
+
+```shell
+git checkout #1
+```
+
 ### Start ec2 servers.
 
 ```shell
@@ -51,3 +57,33 @@ Run command
 ansible ec2 -m command -a uptime
 ansible ec2 -m command -a "ls -la /"
 ```
+
+## #2, Run simple playbook, deploy nginx servers to all ec2 instances.
+
+Second, checkout tags/#2 branch
+
+```shell
+git checkout #2
+```
+
+Check diff, add web.yml and template files.
+
+```
+git diff #1 #2
+```
+
+Run web.yml playbook, and deploy nginx servers to all ec2 instances.
+
+```
+ansible-playbook web.yml
+```
+
+Check it. But before check, you should edit aws ec2 security gruop settings to access port http:80, https:443.
+
+```
+open http://$(docker-machine ip ec2-01)
+open http://$(docker-machine ip ec2-02)
+```
+
+Looks good.
+
