@@ -87,3 +87,20 @@ open http://$(docker-machine ip ec2-02)
 
 Looks good.
 
+## #3, Refactor with using role.
+
+
+```shell
+git checkout #3
+```
+
+check diff
+
+```shell
+git diff #2 #3
+```
+
+Run web.yml playbook, and check nothing changed.
+
+
+
