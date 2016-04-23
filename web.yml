@@ -1,6 +1,10 @@
----
 - name: Web Server with Nginx
   hosts: ec2
-  become: True
+  vars_files:
+    - secrets.yml
   roles:
-    - frontend
+    - role: frontend
+      become: True
+    - role: db
+      database_name: "dbname"
+      database_user: "dbuser"

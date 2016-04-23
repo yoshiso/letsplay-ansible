@@ -102,5 +102,23 @@ git diff #2 #3
 
 Run web.yml playbook, and check nothing changed.
 
+## #4, Add db role.
+
+```
+git checkout #4
+```
+
+check diff
+
+```
+git diff #3 #4
+```
+
+Run web.yml playbook, and check postgresql added.
+
+```
+ansible-playbook web.yml
+```
+
 
 
