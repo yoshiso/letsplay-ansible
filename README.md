@@ -4,6 +4,12 @@ direnv
 docker-machine
 ansible
 
+## Install
+
+```shell
+brew install direnv docker-machine ansible
+```
+
 ## Setup
 
 cp .envrc.sample .envrc
@@ -13,7 +19,7 @@ direnv allow .
 
 ## #1, Ping to target servers.
 
-First, checkout tags/#1 branch. 
+First, checkout tags/#1 branch.
 
 ```shell
 git checkout #1
@@ -119,6 +125,3 @@ Run web.yml playbook, and check postgresql added.
 ```
 ansible-playbook web.yml
 ```
-
-
-
